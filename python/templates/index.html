@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <title>BBC News Headlines</title>
+  <style>
+    *{
+      Background-color:grey;
+      Color:black;
+      }
+    
+    .box{
+      border:2px solid black;
+      Border-radius:10px;
+      Padding:10px;
+      }
+    h1{
+      Color:white;
+      Background-color:black;
+      }
+    /* Add some borders and padding to the news container */
+    h2 {
+        border: 2px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    /* Add some font styles to the headline */
+    h2 {
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    /* Add some font styles to the content */
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="/">home/trending news</a>
+  
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/sports.popular">apple</a>
+      </li>
+    </ul>
+    {% for item in news %}
+    <div class="box1">
+      <a href="{{item.url1}}"></a>
+    </div> 
+    {% endfor %}
+    <u2 class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/sports2.popular">india</a>
+      </li>
+    </u2>
+    {% for item in news %}
+    <div class="box2">
+      <a href="{{item.url2}}"></a>
+    </div> 
+    {% endfor %}
+    <u3 class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/sports3.popular">tech</a>
+      </li>
+    </u3>
+    {% for item in news %}
+    <div class="box3">
+      <a href="{{item.url3}}"></a>
+    </div> 
+    {% endfor %}
+    <u4 class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/sports4.popular">india sports</a>
+      </li>
+    </u4>
+    {% for item in news %}
+    <div class="box4">
+      <a href="{{item.url4}}"></a>
+    </div> 
+    {% endfor %}
+    <u5 class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/sports5.popular">US sports</a>
+      </li>
+    </u5>
+    {% for item in news %}
+    <div class="box4">
+      <a href="{{item.url5}}"></a>
+    </div> 
+    {% endfor %}
+  </nav>
+  {% for item in news %}
+  <div class="box">
+    <h2>{{ item.title }}</h2>
+    <p>{{ item.description }}</p>
+    <a href="{{item.url}}">Read more</a>
+  </div> 
+  {% endfor %}
+  
+
+</body>
+</html>
